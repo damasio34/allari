@@ -1,0 +1,14 @@
+<div class="carousel">
+    <div class="img-container">
+        <img class="slides" *ngFor="let item of items; let select = index;" src="{{item.img}}">
+    </div>
+    <div class="menu">
+        <button id="prev" (click)="previus()">&#171;</button>
+        <button id="next" (click)="next()">&#187;</button>
+    </div>
+    <div class="slide-button-wrapper">
+        <div class="slide-button" *ngFor="let item of items; let x = index" (click)="selectItem(x)"
+            [ngClass]="{'slide-button-select': x == selectedIndex}">
+        </div>
+    </div>
+</div>

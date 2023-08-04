@@ -1,0 +1,23 @@
+<div class="container">
+    <header><app-clock></app-clock></header>
+    <nav>DARLAN DAMASIO DA SILVA</nav>
+    <div class="content">
+        <aside class="left-sidebar">
+            <app-mouse-position></app-mouse-position>
+        </aside>
+        <main>
+            <p>This project was implemented using angular 16, added to the backend implemented in .net 6, where random
+                animal data is consulted. To run the application it is necessary to have these frameworks installed.</p>
+            <app-button-ripple (click)="getAnimals()" text="List Items"></app-button-ripple>
+            <li *ngFor="let animal of animals">
+                <span class="animal">{{animal}}</span>
+            </li>
+        </main>
+        <aside class="right-sidebar">
+            <app-carousel></app-carousel>
+        </aside>
+    </div>
+    <footer>
+        <p><a href="https://allari.com/" target="_blank">allari.com</a></p>
+    </footer>
+</div>
